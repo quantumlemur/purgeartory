@@ -1,6 +1,6 @@
-from django.shortcuts import render_to_response
-from django.template.context import RequestContext
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
+@login_required
 def home(request):
-    context = RequestContext(request, {'request': request, 'user': request.user})
-    return render_to_response('thirdauth/home.html', context=context)
+    return render(request, 'core/home.html')

@@ -26,7 +26,10 @@ SECRET_KEY = '*aqo(snb@e+r*c!h9(jc!$n_66ok41(fx(a78nze782hr7l7pt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'purgeartory.herokuapp.com',
+    'localhost',
+]
 
 
 # Application definition

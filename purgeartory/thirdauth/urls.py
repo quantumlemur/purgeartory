@@ -6,6 +6,6 @@ admin.autodiscover()
 from . import views
 
 urlpatterns = [
-   url(r'$', views.home, name='home'),
-   url(r'whoami$', views.home, name='whoami'),
+   # url(r'$', views.home, name='home'),
+   # url(r'whoami$', views.home, name='whoami'),
 ]

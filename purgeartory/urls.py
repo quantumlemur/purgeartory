@@ -20,10 +20,11 @@ from django.contrib.auth import views as auth_views
 from thirdauth import views as core_views
 
 urlpatterns = [
-    url(r'^$', core_views.home, name='home'),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url('', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('thirdauth.urls')),
+
 ]

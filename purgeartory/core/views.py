@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import AdminPasswordChangeForm, PasswordChangeForm, UserCreationForm
 
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def signup(request):
@@ -20,10 +20,14 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 
-@login_required
 def home(request):
+    if request.user.is_authenticated():
+        return redirect('/loggedin')
     return render(request, 'core/home.html')
 
+@login_required
+def loggedin(request):
+    return render(request, 'core/login_landing.html')
 
 def whoami(request):
     return render(request, 'core/home.html')

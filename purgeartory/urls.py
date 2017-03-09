@@ -29,4 +29,5 @@ urlpatterns = [
     # url(r'^settings/password/$', core_views.password, name='password'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
-    ]
+    url(r'^', include('purgeartory.core.urls')),
+]

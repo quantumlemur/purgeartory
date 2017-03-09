@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from purgeartory.thirdauth import views as core_views
+from purgeartory.core import views as core_views
 
 urlpatterns = [
     url(r'^$', core_views.home, name='home'),

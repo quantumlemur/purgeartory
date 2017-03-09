@@ -22,8 +22,8 @@ def signup(request):
 
 @login_required
 def home(request):
-    return render(request, 'thirdauth/home.html')
+    return render(request, 'core/home.html')
 
 
 def whoami(request):
-    return render(request, 'thirdauth/home.html')
+    return render(request, 'core/home.html')

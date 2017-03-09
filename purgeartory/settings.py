@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 
     'social_django',
 
-    'purgeartory.thirdauth',
+    'purgeartory.core',
 ]
 
 MIDDLEWARE = [
